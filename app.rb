@@ -8,7 +8,17 @@ class App < Sinatra::Base
   end
 
   get '/' do
+    erb :index
+  end
+
+  get '/customer_session' do
     @session = session
   end
+
+  post '/checkout' do
+    puts @session[session_id]
+  end
+
+
 
 end
